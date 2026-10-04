@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Pulse}",
+            "name": "Debug Pulse",
+            "target": "Pulse",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Pulse"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Pulse}",
+            "name": "Release Pulse",
+            "target": "Pulse",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Pulse"
+        }
+    ]
+}
