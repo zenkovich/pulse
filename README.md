@@ -54,6 +54,18 @@ scripts/build.sh          # только собрать build/Pulse.app
 scripts/build.sh --universal   # arm64 + x86_64
 ```
 
+### Архив для другого Mac
+
+```sh
+scripts/package.sh            # универсальная сборка (Apple Silicon + Intel) → dist/Pulse-<версия>.zip
+scripts/package.sh --native   # только под текущую архитектуру, быстрее
+```
+
+Приложение подписано ad-hoc (без Developer ID и нотаризации), поэтому на другом Mac macOS при первом запуске
+его заблокирует. Распаковать, перенести `Pulse.app` в «Программы» и один раз разрешить:
+«Системные настройки → Конфиденциальность и безопасность → Всё равно открыть» — или в терминале
+`xattr -dr com.apple.quarantine /Applications/Pulse.app`.
+
 Автозапуск включается в настройках («Запускать при входе в систему») или из терминала:
 
 ```sh
